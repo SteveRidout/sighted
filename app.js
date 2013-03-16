@@ -30,12 +30,13 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
+// app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
 
 app.get('/api/name', api.name);
+app.get('/api/item', api.item);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
